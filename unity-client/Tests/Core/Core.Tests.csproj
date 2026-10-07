@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Proyecto de tests del NÚCLEO de reglas del cliente.
+
+    Compila SÓLO los archivos de Assets/Scripts/Core, que están escritos sin
+    ninguna referencia a UnityEngine a propósito. Eso permite:
+      - ejecutarlos en CI sin instalar Unity (que pesa gigas y no corre en un
+        runner estándar),
+      - reutilizar esa misma lógica en un servidor .NET si algún día se quisiera.
+
+    Los scripts de UI, FX y Net SÍ dependen de UnityEngine y se validan con el
+    compilador del editor (Unity -runTests -testPlatform EditMode).
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>UnoX.Core.Tests</RootNamespace>
+    <AssemblyName>UnoX.Core.Tests</AssemblyName>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="GoldenVectorsTests.cs" />
+    <Compile Include="TurnManagerTests.cs" />
+    <Compile Include="../../Assets/Scripts/Core/CardModel.cs" Link="Core/CardModel.cs" />
+    <Compile Include="../../Assets/Scripts/Core/DeterministicRng.cs" Link="Core/DeterministicRng.cs" />
+    <Compile Include="../../Assets/Scripts/Core/DeckManager.cs" Link="Core/DeckManager.cs" />
+    <Compile Include="../../Assets/Scripts/Core/RulesEngine.cs" Link="Core/RulesEngine.cs" />
+    <Compile Include="../../Assets/Scripts/Core/TurnManager.cs" Link="Core/TurnManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Los vectores dorados compartidos con el servidor. Se copian al directorio
+         de salida para que el test los lea sin depender de la ruta del repo. -->
+    <None Include="../../../shared/golden-vectors.json" Link="golden-vectors.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+</Project>

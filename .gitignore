@@ -1,0 +1,57 @@
+# --- Node / servidor ---
+node_modules/
+npm-debug.log*
+.env
+.env.local
+coverage/
+.nyc_output/
+
+# --- Unity (cliente) ---
+# Generados por el editor: nunca deben entrar al repo.
+unity-client/[Ll]ibrary/
+unity-client/[Tt]emp/
+unity-client/[Oo]bj/
+unity-client/[Bb]uild/
+unity-client/[Bb]uilds/
+unity-client/[Ll]ogs/
+unity-client/[Uu]ser[Ss]ettings/
+unity-client/[Mm]emoryCaptures/
+unity-client/[Rr]ecordings/
+
+# Asset store y paquetes cacheados
+unity-client/[Aa]ssets/AssetStoreTools*
+unity-client/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Crashlytics / IL2CPP
+sysinfo.txt
+crashlytics-build.properties
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
+*.pdb
+*.mdb
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+ExportedObj/
+.consulo/
+
+# EXCEPCIÓN: este csproj está escrito a mano (no lo genera Unity) y es lo que
+# ejecuta `dotnet test` en CI contra los vectores dorados. Ignorarlo rompería el
+# build de GitHub Actions con "file not found".
+!unity-client/Tests/Core/Core.Tests.csproj
+
+# SO
+.DS_Store
+Thumbs.db

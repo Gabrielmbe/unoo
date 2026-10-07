@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main, 'arena/**']
+  pull_request:
+
+jobs:
+  # ===========================================================================
+  #  Servidor: la parte que SÍ decide el resultado de una partida.
+  #  Corre la suite completa, incluida la integración con WebSockets reales.
+  # ===========================================================================
+  server:
+    name: Servidor (Node)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    strategy:
+      matrix:
+        node-version: [20.x, 22.x]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+          cache-dependency-path: server/package-lock.json
+
+      - run: npm ci
+
+      - name: Tests (reglas, mazo, juego, red, vectores dorados)
+        run: npm test
+
+      - name: Verifica que los vectores dorados no están desactualizados
+        run: |
+          node scripts/generate-golden-vectors.mjs > /dev/null
+          if ! git diff --quiet -- ../shared/golden-vectors.json; then
+            echo "::error::shared/golden-vectors.json está desactualizado. Ejecuta 'npm run vectors' y commitea el resultado."
+            git diff --stat -- ../shared/golden-vectors.json
+            exit 1
+          fi
+
+  # ===========================================================================
+  #  Cliente Unity: compila el núcleo de reglas y lo valida CONTRA los mismos
+  #  vectores dorados que el servidor.
+  #
+  #  Esto es lo que impide el bug más caro de este proyecto: que DeckManager.cs o
+  #  RulesEngine.cs se alejen del servidor y el juego se rompa sólo en producción,
+  #  porque en el editor "funcionaba".
+  # ===========================================================================
+  unity-core:
+    name: Cliente (núcleo C#)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: unity-client
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restaura paquetes
+        run: dotnet restore Tests/Core/Core.Tests.csproj
+
+      - name: Build
+        # Se captura la salida para dejarla en el resumen de la ejecución: así los
+        # errores del compilador se pueden leer desde la página del run sin tener
+        # que descargar el zip de logs.
+        run: |
+          set +e
+          out=$(dotnet build Tests/Core/Core.Tests.csproj -c Release --no-restore 2>&1)
+          status=$?
+          echo "$out"
+          {
+            echo '## Compilación del núcleo C#'
+            echo '```'
+            echo "$out" | grep -E "error|warning|Build succeeded|Build FAILED" || echo "(sin salida)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
+      - name: Tests del núcleo (DeckManager, RulesEngine, TurnManager, RNG)
+        run: dotnet test Tests/Core/Core.Tests.csproj -c Release --no-build --verbosity normal

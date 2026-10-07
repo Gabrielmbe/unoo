@@ -1,0 +1,37 @@
+services:
+  # ===========================================================================
+  #  UNO-X · servidor autoritativo
+  #
+  #  Por qué un Web Service y no un Background Worker:
+  #  Render sólo expone puertos públicos en los Web Services, y necesitamos el
+  #  upgrade HTTP -> WebSocket. Un Background Worker no tiene HTTP entrante.
+  #
+  #  POR QUÉ NO EL FREE TIER PARA PRODUCCIÓN:
+  #  El free tier duerme el servicio a los 15 min sin tráfico y tarda ~1 min en
+  #  despertar. En un juego por turnos eso significa que el primer jugador que
+  #  abre la app se queda mirando una pantalla de "conectando". Para jugar de
+  #  verdad hace falta un plan de pago (siempre encendido). El free tier sirve
+  #  para desarrollo; el cliente ya lleva reconexión con backoff para aguantarlo.
+  #
+  #  MEMORIA: 512 MB dan de sobra. Una sala son ~2 KB en memoria; el proceso
+  #  arranca en ~40 MB. El cuello de botella sería el número de sockets, no la RAM.
+  # ===========================================================================
+  - type: web
+    name: unox-server
+    runtime: node
+    plan: starter
+    region: frankfurt          # elige la más cercana a tus jugadores
+    rootDir: server
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 20
+      # PORT lo inyecta Render. NO definirlo aquí: es el error de despliegue más
+      # común en esta plataforma.
+      - key: TICK_MS
+        value: "100"
