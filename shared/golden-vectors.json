@@ -1,0 +1,1037 @@
+{
+  "$schema": "Vectores dorados compartidos. Generados por server/src (implementación de referencia verificada por la suite de tests).",
+  "$generatedBy": "scripts/generate-golden-vectors.mjs",
+  "$warning": "NO EDITAR A MANO. Si cambian las reglas, se regeneran y se actualizan AMBAS implementaciones.",
+  "deckComposition": {
+    "total": 108,
+    "perColor": 25,
+    "wild": 4,
+    "wildDrawFour": 4
+  },
+  "rng": {
+    "0": [
+      0.26642920868471265,
+      0.0003297457005828619,
+      0.2232720274478197,
+      0.1462021479383111,
+      0.46732782293111086,
+      0.5450490827206522,
+      0.6152513844426721,
+      0.6489853798411787,
+      0.45600721263326705,
+      0.581218967679888,
+      0.24625753005966544,
+      0.09785169479437172
+    ],
+    "1": [
+      0.6270739405881613,
+      0.002735721180215478,
+      0.5274470399599522,
+      0.9810509674716741,
+      0.9683778982143849,
+      0.281103502959013,
+      0.6128388606011868,
+      0.7207431411370635,
+      0.425796952098608,
+      0.9948229456786066,
+      0.45527112716808915,
+      0.48878831742331386
+    ],
+    "42": [
+      0.6011037519201636,
+      0.44829055899754167,
+      0.8524657934904099,
+      0.6697340414393693,
+      0.17481389874592423,
+      0.5265925421845168,
+      0.2732279943302274,
+      0.6247446539346129,
+      0.8654746483080089,
+      0.4723170551005751,
+      0.24992373422719538,
+      0.8820588334929198
+    ],
+    "12345": [
+      0.9797282677609473,
+      0.3067522644996643,
+      0.484205421525985,
+      0.817934412509203,
+      0.5094283693470061,
+      0.34747186047025025,
+      0.07375754183158278,
+      0.7663964673411101,
+      0.9968264393974096,
+      0.8250224851071835,
+      0.4599348735064268,
+      0.9458441860042512
+    ],
+    "20260101": [
+      0.2559139896184206,
+      0.5929048631805927,
+      0.8053383126389235,
+      0.9675766411237419,
+      0.7292939077597111,
+      0.12063259980641305,
+      0.3791074389591813,
+      0.3489331630989909,
+      0.08296352112665772,
+      0.24724355130456388,
+      0.2032521974761039,
+      0.8428757968358696
+    ],
+    "2147483647": [
+      0.4290980885270983,
+      0.12713524978607893,
+      0.3852774982806295,
+      0.39639189024455845,
+      0.11962746665813029,
+      0.9531875969842076,
+      0.6806830384302884,
+      0.9957805015146732,
+      0.3577910573221743,
+      0.29028820362873375,
+      0.5385690161492676,
+      0.9202438748907298
+    ],
+    "-7": [
+      0.43306733411736786,
+      0.32539576734416187,
+      0.5442695003002882,
+      0.48018999374471605,
+      0.048719558166339993,
+      0.041189806535840034,
+      0.2679634625092149,
+      0.20619804575107992,
+      0.8677857047878206,
+      0.8301213295198977,
+      0.12125392071902752,
+      0.03725153347477317
+    ]
+  },
+  "decks": {
+    "0": {
+      "first20": [
+        "c20",
+        "c95",
+        "c16",
+        "c80",
+        "c63",
+        "c54",
+        "c2",
+        "c76",
+        "c5",
+        "c100",
+        "c89",
+        "c33",
+        "c98",
+        "c83",
+        "c26",
+        "c41",
+        "c44",
+        "c34",
+        "c64",
+        "c42"
+      ],
+      "fnv1a": "84c6e329"
+    },
+    "1": {
+      "first20": [
+        "c11",
+        "c7",
+        "c63",
+        "c76",
+        "c46",
+        "c107",
+        "c15",
+        "c71",
+        "c75",
+        "c50",
+        "c106",
+        "c29",
+        "c81",
+        "c79",
+        "c101",
+        "c65",
+        "c60",
+        "c32",
+        "c70",
+        "c21"
+      ],
+      "fnv1a": "d9405717"
+    },
+    "42": {
+      "first20": [
+        "c20",
+        "c25",
+        "c68",
+        "c95",
+        "c58",
+        "c51",
+        "c83",
+        "c36",
+        "c74",
+        "c92",
+        "c11",
+        "c40",
+        "c81",
+        "c44",
+        "c1",
+        "c33",
+        "c101",
+        "c87",
+        "c39",
+        "c76"
+      ],
+      "fnv1a": "e138ef73"
+    },
+    "12345": {
+      "first20": [
+        "c39",
+        "c93",
+        "c54",
+        "c1",
+        "c14",
+        "c94",
+        "c42",
+        "c49",
+        "c9",
+        "c64",
+        "c73",
+        "c44",
+        "c33",
+        "c96",
+        "c12",
+        "c41",
+        "c10",
+        "c50",
+        "c13",
+        "c30"
+      ],
+      "fnv1a": "7142a6cf"
+    },
+    "20260101": {
+      "first20": [
+        "c10",
+        "c2",
+        "c56",
+        "c71",
+        "c59",
+        "c106",
+        "c36",
+        "c40",
+        "c13",
+        "c39",
+        "c14",
+        "c51",
+        "c30",
+        "c82",
+        "c6",
+        "c74",
+        "c26",
+        "c96",
+        "c95",
+        "c3"
+      ],
+      "fnv1a": "fcef3161"
+    },
+    "2147483647": {
+      "first20": [
+        "c57",
+        "c64",
+        "c1",
+        "c84",
+        "c18",
+        "c21",
+        "c7",
+        "c9",
+        "c5",
+        "c34",
+        "c92",
+        "c88",
+        "c106",
+        "c0",
+        "c31",
+        "c48",
+        "c37",
+        "c71",
+        "c42",
+        "c53"
+      ],
+      "fnv1a": "d70c7ded"
+    },
+    "-7": {
+      "first20": [
+        "c39",
+        "c54",
+        "c53",
+        "c2",
+        "c59",
+        "c64",
+        "c63",
+        "c94",
+        "c103",
+        "c90",
+        "c73",
+        "c60",
+        "c78",
+        "c83",
+        "c107",
+        "c99",
+        "c42",
+        "c47",
+        "c81",
+        "c58"
+      ],
+      "fnv1a": "a383c4f1"
+    }
+  },
+  "seatTable": [
+    {
+      "playerCount": 2,
+      "direction": 1,
+      "seat": 0,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 2,
+      "direction": 1,
+      "seat": 0,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 2,
+      "direction": 1,
+      "seat": 1,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 2,
+      "direction": 1,
+      "seat": 1,
+      "count": 2,
+      "expected": 1
+    },
+    {
+      "playerCount": 2,
+      "direction": -1,
+      "seat": 0,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 2,
+      "direction": -1,
+      "seat": 0,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 2,
+      "direction": -1,
+      "seat": 1,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 2,
+      "direction": -1,
+      "seat": 1,
+      "count": 2,
+      "expected": 1
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 0,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 0,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 1,
+      "count": 1,
+      "expected": 2
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 1,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 2,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 3,
+      "direction": 1,
+      "seat": 2,
+      "count": 2,
+      "expected": 1
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 0,
+      "count": 1,
+      "expected": 2
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 0,
+      "count": 2,
+      "expected": 1
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 1,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 1,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 2,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 3,
+      "direction": -1,
+      "seat": 2,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 0,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 0,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 1,
+      "count": 1,
+      "expected": 2
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 1,
+      "count": 2,
+      "expected": 3
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 2,
+      "count": 1,
+      "expected": 3
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 2,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 3,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 4,
+      "direction": 1,
+      "seat": 3,
+      "count": 2,
+      "expected": 1
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 0,
+      "count": 1,
+      "expected": 3
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 0,
+      "count": 2,
+      "expected": 2
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 1,
+      "count": 1,
+      "expected": 0
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 1,
+      "count": 2,
+      "expected": 3
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 2,
+      "count": 1,
+      "expected": 1
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 2,
+      "count": 2,
+      "expected": 0
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 3,
+      "count": 1,
+      "expected": 2
+    },
+    {
+      "playerCount": 4,
+      "direction": -1,
+      "seat": 3,
+      "count": 2,
+      "expected": 1
+    }
+  ],
+  "resolveTable": [
+    {
+      "value": 3,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 3,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 1,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 3,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 3,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 3,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 7,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 7,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 1,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 7,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 7,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 3,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 10,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 0,
+      "newDirection": 1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 10,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 0,
+      "newDirection": -1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 10,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 2,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 10,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 2,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 11,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 0,
+      "newDirection": -1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 11,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 0,
+      "newDirection": 1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 11,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 3,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 11,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 12,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 0,
+      "newDirection": 1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 12,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 0,
+      "newDirection": -1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 12,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 2,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 12,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 2,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 13,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 13,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 1,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 13,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 1,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 13,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 3,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 14,
+      "playerCount": 2,
+      "direction": 1,
+      "nextSeat": 0,
+      "newDirection": 1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 14,
+      "playerCount": 2,
+      "direction": -1,
+      "nextSeat": 0,
+      "newDirection": -1,
+      "samePlayerAgain": true
+    },
+    {
+      "value": 14,
+      "playerCount": 4,
+      "direction": 1,
+      "nextSeat": 2,
+      "newDirection": 1,
+      "samePlayerAgain": false
+    },
+    {
+      "value": 14,
+      "playerCount": 4,
+      "direction": -1,
+      "nextSeat": 2,
+      "newDirection": -1,
+      "samePlayerAgain": false
+    }
+  ],
+  "scoring": [
+    {
+      "hand": [
+        {
+          "color": 0,
+          "value": 8
+        },
+        {
+          "color": 3,
+          "value": 3
+        },
+        {
+          "color": 1,
+          "value": 10
+        },
+        {
+          "color": 4,
+          "value": 13
+        }
+      ],
+      "expected": 81
+    },
+    {
+      "hand": [
+        {
+          "color": 0,
+          "value": 0
+        }
+      ],
+      "expected": 0
+    },
+    {
+      "hand": [
+        {
+          "color": 2,
+          "value": 11
+        },
+        {
+          "color": 2,
+          "value": 12
+        }
+      ],
+      "expected": 40
+    },
+    {
+      "hand": [
+        {
+          "color": 4,
+          "value": 14
+        },
+        {
+          "color": 4,
+          "value": 14
+        }
+      ],
+      "expected": 100
+    },
+    {
+      "hand": [
+        {
+          "color": 1,
+          "value": 9
+        },
+        {
+          "color": 1,
+          "value": 9
+        },
+        {
+          "color": 3,
+          "value": 5
+        }
+      ],
+      "expected": 23
+    }
+  ],
+  "legalCases": [
+    {
+      "name": "mismo color",
+      "top": {
+        "color": 0,
+        "value": 7
+      },
+      "topColor": 0,
+      "card": {
+        "color": 0,
+        "value": 3
+      },
+      "hand": [
+        {
+          "color": 0,
+          "value": 3
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    },
+    {
+      "name": "mismo número",
+      "top": {
+        "color": 0,
+        "value": 7
+      },
+      "topColor": 0,
+      "card": {
+        "color": 3,
+        "value": 7
+      },
+      "hand": [
+        {
+          "color": 3,
+          "value": 7
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    },
+    {
+      "name": "ni color ni número",
+      "top": {
+        "color": 0,
+        "value": 7
+      },
+      "topColor": 0,
+      "card": {
+        "color": 3,
+        "value": 3
+      },
+      "hand": [
+        {
+          "color": 3,
+          "value": 3
+        }
+      ],
+      "expected": false,
+      "rules": "default"
+    },
+    {
+      "name": "wild siempre",
+      "top": {
+        "color": 1,
+        "value": 2
+      },
+      "topColor": 1,
+      "card": {
+        "color": 4,
+        "value": 13
+      },
+      "hand": [
+        {
+          "color": 4,
+          "value": 13
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    },
+    {
+      "name": "+4 bloqueado con color",
+      "top": {
+        "color": 1,
+        "value": 2
+      },
+      "topColor": 1,
+      "card": {
+        "color": 4,
+        "value": 14
+      },
+      "hand": [
+        {
+          "color": 1,
+          "value": 8
+        },
+        {
+          "color": 4,
+          "value": 14
+        }
+      ],
+      "expected": false,
+      "rules": "default"
+    },
+    {
+      "name": "+4 legal sin color",
+      "top": {
+        "color": 1,
+        "value": 2
+      },
+      "topColor": 1,
+      "card": {
+        "color": 4,
+        "value": 14
+      },
+      "hand": [
+        {
+          "color": 0,
+          "value": 8
+        },
+        {
+          "color": 4,
+          "value": 14
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    },
+    {
+      "name": "+4 con restricción off",
+      "top": {
+        "color": 1,
+        "value": 2
+      },
+      "topColor": 1,
+      "card": {
+        "color": 4,
+        "value": 14
+      },
+      "hand": [
+        {
+          "color": 1,
+          "value": 8
+        },
+        {
+          "color": 4,
+          "value": 14
+        }
+      ],
+      "expected": true,
+      "rules": "relaxed"
+    },
+    {
+      "name": "color efectivo tras wild",
+      "top": {
+        "color": 4,
+        "value": 13
+      },
+      "topColor": 3,
+      "card": {
+        "color": 3,
+        "value": 1
+      },
+      "hand": [
+        {
+          "color": 3,
+          "value": 1
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    },
+    {
+      "name": "skip del mismo color",
+      "top": {
+        "color": 2,
+        "value": 5
+      },
+      "topColor": 2,
+      "card": {
+        "color": 2,
+        "value": 10
+      },
+      "hand": [
+        {
+          "color": 2,
+          "value": 10
+        }
+      ],
+      "expected": true,
+      "rules": "default"
+    }
+  ]
+}

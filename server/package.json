@@ -1,0 +1,21 @@
+{
+  "name": "unox-server",
+  "version": "0.1.0",
+  "description": "Servidor autoritativo WebSocket para UNO-X (clon multijugador de UNO! para Unity). Ligero, sin base de datos, listo para Render.",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test \"test/*.test.js\"",
+    "test:watch": "node --test --watch \"test/*.test.js\"",
+    "vectors": "node scripts/generate-golden-vectors.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "license": "MIT"
+}
